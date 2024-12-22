@@ -16,6 +16,13 @@ Target //:baz up-to-date:
 INFO: Elapsed time: 2.403s, Critical Path: 0.14s
 INFO: 5 processes: 2 internal, 3 darwin-sandbox.
 INFO: Build completed successfully, 5 total actions
+```
+
+```
+$ ls $(bazel info output_base)/external | grep repo2
+Starting local Bazel server and connecting to it...
+@repo2.marker
+repo2
 $ USE_BAZEL_VERSION=7.1.1 bazelisk clean --expunge
 ```
 
@@ -31,4 +38,9 @@ ERROR: Analysis of target '//:baz' failed; build aborted: Analysis failed
 INFO: Elapsed time: 3.204s, Critical Path: 0.01s
 INFO: 1 process: 1 internal.
 ERROR: Build did NOT complete successfully
+```
+
+```
+$ ls $(bazel info output_base)/external | grep repo2
+$
 ```
