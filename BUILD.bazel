@@ -1,0 +1,8 @@
+cc_library(
+    name = "baz",
+    srcs = [
+        "baz.c",
+    ],
+    hdrs = ["baz.h"],
+    deps = ["@repo2//:bar"],
+)

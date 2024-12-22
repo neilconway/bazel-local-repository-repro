@@ -1,0 +1,16 @@
+cc_binary(
+    name = "foo",
+    srcs = [
+        "foo.c",
+    ],
+    deps = ["//:bar"],
+)
+
+cc_library(
+    name = "bar",
+    srcs = [
+        "bar.c",
+    ],
+    hdrs = ["bar.h"],
+    visibility = ["//visibility:public"],
+)
